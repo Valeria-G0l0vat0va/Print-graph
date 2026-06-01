@@ -1,6 +1,4 @@
 #include "IOC.h"
 
-IOC::IOC()
-{
-
-}
+IOCContainer gContainer;
+int IOCContainer::s_nextTypeId = 1;
