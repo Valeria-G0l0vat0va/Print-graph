@@ -1,4 +1,6 @@
-QT       += core gui
+QT += core gui widgets charts sql printsupport
+QT += sql
+QT += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,13 +12,18 @@ CONFIG += c++17
 
 SOURCES += \
     IOC.cpp \
+    ThemeWidget.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    BarChart.h \
     GraphPoint.h \
     IChart.h \
+    IDataProvider.h \
     IOC.h \
+    LineChart.h \
+    ThemeWidget.h \
     mainwindow.h
 
 FORMS += \
