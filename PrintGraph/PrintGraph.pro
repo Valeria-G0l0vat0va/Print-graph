@@ -12,17 +12,20 @@ CONFIG += c++17
 
 SOURCES += \
     IOC.cpp \
+    SqliteDataProvider.cpp \
     ThemeWidget.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     BarChart.h \
+    GraphModel.h \
     GraphPoint.h \
     IChart.h \
     IDataProvider.h \
     IOC.h \
     LineChart.h \
+    SqliteDataProvider.h \
     ThemeWidget.h \
     mainwindow.h
 

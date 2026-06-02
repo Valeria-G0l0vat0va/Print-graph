@@ -15,15 +15,12 @@ ThemeWidget::ThemeWidget(QWidget *parent)
     : QWidget(parent), isGrayScale(false)
 {
     chartView = new QChartView();
-
     chartView->setRenderHint(QPainter::Antialiasing);
     QChart* emptyChart = new QChart();
     emptyChart->setTitle("Выберите SQLite файл");
     chartView->setChart(emptyChart);
     QVBoxLayout* layout =new QVBoxLayout(this);
-
     layout->addWidget(chartView);
-
     setLayout(layout);
 }
 
@@ -35,20 +32,15 @@ void ThemeWidget::setChart(QChart* chart)
 {
     if(isGrayScale)
     {
-        chart->setTheme(
-            QChart::ChartThemeHighContrast);
+        chart->setTheme(QChart::ChartThemeHighContrast);
     }
     else
     {
-        chart->setTheme(
-            QChart::ChartThemeLight);
+        chart->setTheme(QChart::ChartThemeLight);
     }
 
-    QChart* oldChart =
-        chartView->chart();
-
+    QChart* oldChart =chartView->chart();
     chartView->setChart(chart);
-
     delete oldChart;
 }
 
