@@ -15,12 +15,10 @@ public:
         chart->setTitle("Bar chart");
 
         QBarSeries* series = new QBarSeries();
-
         QBarSet* set = new QBarSet("Value");
-
         QStringList categories;
 
-        int count = qMin(data.size(), 500);
+        int count = qMin(data.size(), 100);
 
         for (int i = 0; i < count; ++i)
         {

@@ -19,10 +19,7 @@ public:
 
         for (const auto& p : data)
         {
-            series->append(
-                p.date.toMSecsSinceEpoch(),
-                p.value
-                );
+            series->append(p.date.toMSecsSinceEpoch(),p.value);
         }
 
         chart->addSeries(series);
